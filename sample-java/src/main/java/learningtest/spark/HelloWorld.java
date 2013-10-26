@@ -1,4 +1,4 @@
-package com.izeye.sample.spark;
+package learningtest.spark;
 
 import static spark.Spark.get;
 import spark.Request;
