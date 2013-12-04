@@ -12,7 +12,7 @@ public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
 
 	private static final StringDecoder DECODER = new StringDecoder();
 	private static final StringEncoder ENCODER = new StringEncoder();
-	private static final TelnetClientHandler SERVER_HANDLER = new TelnetClientHandler();
+	private static final TelnetClientHandler CLIENT_HANDLER = new TelnetClientHandler();
 
 	@Override
 	protected void initChannel(SocketChannel ch) throws Exception {
@@ -23,7 +23,7 @@ public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
 		pipeline.addLast("decoder", DECODER);
 		pipeline.addLast("encoder", ENCODER);
 
-		pipeline.addLast("handler", SERVER_HANDLER);
+		pipeline.addLast("handler", CLIENT_HANDLER);
 	}
 
 }
